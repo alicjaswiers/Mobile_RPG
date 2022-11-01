@@ -1,13 +1,28 @@
 extends Node
 
-onready var enemy = $Enemy
-onready var swordButton = $UI/SwordButton
+const BattleUnits = preload("res://BattleUnits.tres")
 
-func _on_SwordButton_pressed():
+onready var battleActionButtons = $UI/BattleActionButtons
+
+func _ready():
+	start_player_turn()
+
+func start_enemy_turn():
+	battleActionButtons.hide()
+	var enemy = BattleUnits.Enemy
 	if enemy != null:
-		enemy.hp -= 4
+		enemy.attack()
+		yield(enemy, "end_turn")
+	start_player_turn()
+
+func start_player_turn():
+	battleActionButtons.show()
+	var playerStats = BattleUnits.PlayerStats
+	playerStats.ap = playerStats.max_ap
+	yield(playerStats, "end_turn")
+	start_enemy_turn()
 
 
 func _on_Enemy_died():
-	enemy = null
-	swordButton.hide()
+	battleActionButtons.hide()
+
