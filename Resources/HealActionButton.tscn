@@ -7,3 +7,7 @@ anchor_bottom = 0.034
 margin_bottom = 7.56
 text = "HEAL"
 icon_align = 1
+
+[node name="HoverInfo" parent="." index="0"]
+description = "Heal
+Heals 5 health."
