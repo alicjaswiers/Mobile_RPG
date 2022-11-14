@@ -47,3 +47,4 @@ func take_damage(amount):
 
 func is_dead():
 	return hp <=0
+

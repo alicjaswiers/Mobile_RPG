@@ -39,6 +39,8 @@ func create_new_enemy():
 	enemy.connect("died", self, "_on_Enemy_died")
 
 func _on_Enemy_died():
+	BattleUnits.PlayerStats.points += 3
+	BattleUnits.PlayerStats.stage += 1
 	nextRoomButton.show()
 	battleActionButtons.hide()
 
