@@ -52,3 +52,7 @@ func _on_NextRoomButton_pressed():
 	playerStats.ap = playerStats.max_ap
 	battleActionButtons.show()
 	create_new_enemy()
+
+
+func _on_MenuActionButton_pressed():
+	pass # Replace with function body.
