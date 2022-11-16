@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://DefaultTheme.tres" type="Theme" id=1]
+[ext_resource path="res://StatsMenu.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Menu/GameStatsPanel.gd" type="Script" id=3]
+
+[node name="StatsMenu" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 2 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.00392157, 0.00392157, 0.00392157, 0.317647 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 2.0
+margin_top = -31.0
+margin_right = -2.0
+margin_bottom = 14.0
+color = Color( 0.278431, 0.278431, 0.278431, 1 )
+
+[node name="GameStatsPanel" type="Panel" parent="."]
+margin_left = 2.0
+margin_top = 49.0
+margin_right = 88.0
+margin_bottom = 94.0
+theme = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="GameStats" type="VBoxContainer" parent="GameStatsPanel"]
+margin_left = 19.0
+margin_top = 14.0
+margin_right = 64.0
+margin_bottom = 45.0
+theme = ExtResource( 1 )
+alignment = 1
+
+[node name="StageLabel" type="Label" parent="GameStatsPanel/GameStats"]
+margin_top = 2.0
+margin_right = 45.0
+margin_bottom = 6.0
+text = "STAGE: 0"
+align = 1
+
+[node name="PointsLabel" type="Label" parent="GameStatsPanel/GameStats"]
+margin_top = 10.0
+margin_right = 45.0
+margin_bottom = 14.0
+text = "POINTS: 0"
+align = 1
+
+[node name="Button" type="Button" parent="GameStatsPanel/GameStats"]
+margin_top = 18.0
+margin_right = 45.0
+margin_bottom = 28.4417
+text = "RESUME"
+
+[node name="Label" type="Label" parent="GameStatsPanel"]
+margin_left = 1.0
+margin_top = 3.0
+margin_right = 85.0
+margin_bottom = 44.0
+theme = ExtResource( 1 )
+text = "PAUSE"
+align = 1
+
+[connection signal="pressed" from="GameStatsPanel/GameStats/Button" to="." method="_on_Button_pressed"]
