@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Resources/Images/Mobile RPG Mockup.png" type="Texture" id=1]
 [ext_resource path="res://Slime.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Resources/Stingant.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Resources/Seer.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Resources/Menu/StatsMenu.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Resources/Images/backgoundmusic.mp3" type="AudioStream" id=20]
 
 [sub_resource type="StyleBoxEmpty" id=3]
 
@@ -211,6 +212,10 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/FadeToNewRoom = SubResource( 1 )
 anims/RESET = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+autoplay = true
 
 [connection signal="ap_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_ap_changed"]
 [connection signal="hp_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_hp_changed"]

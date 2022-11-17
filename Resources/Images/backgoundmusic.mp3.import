@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/backgoundmusic.mp3-c130b1e787a09dcaf70eeebcacc2b9c2.mp3str"
+
+[deps]
+
+source_file="res://Resources/Images/backgoundmusic.mp3"
+dest_files=[ "res://.import/backgoundmusic.mp3-c130b1e787a09dcaf70eeebcacc2b9c2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
