@@ -43,14 +43,12 @@ alignment = 1
 margin_top = 2.0
 margin_right = 45.0
 margin_bottom = 6.0
-text = "STAGE: 0"
 align = 1
 
 [node name="PointsLabel" type="Label" parent="GameStatsPanel/GameStats"]
 margin_top = 10.0
 margin_right = 45.0
 margin_bottom = 14.0
-text = "POINTS: 0"
 align = 1
 
 [node name="Button" type="Button" parent="GameStatsPanel/GameStats"]
