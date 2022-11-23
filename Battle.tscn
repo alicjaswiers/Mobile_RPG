@@ -214,7 +214,7 @@ __meta__ = {
 anims/FadeToNewRoom = SubResource( 1 )
 anims/RESET = SubResource( 2 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )
 autoplay = true
 
